@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		59B59BB8293897300095B066 /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B59BB7293897300095B066 /* PersonViewController.swift */; };
 		59B59BBA293897450095B066 /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B59BB9293897450095B066 /* HobbiesViewController.swift */; };
+		59B59BBC293899C10095B066 /* ExperienceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B59BBB293899C10095B066 /* ExperienceViewController.swift */; };
 		59BEB26229349A7B00F58CD6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEB26129349A7B00F58CD6 /* LoginViewController.swift */; };
 		59BEB26429349ABB00F58CD6 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEB26329349ABB00F58CD6 /* WelcomeViewController.swift */; };
 		59BEB26A29379A5500F58CD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59BEB26929379A5500F58CD6 /* User.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		59B59BB7293897300095B066 /* PersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
 		59B59BB9293897450095B066 /* HobbiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
+		59B59BBB293899C10095B066 /* ExperienceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceViewController.swift; sourceTree = "<group>"; };
 		59BEB26129349A7B00F58CD6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		59BEB26329349ABB00F58CD6 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		59BEB26929379A5500F58CD6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				59BEB26329349ABB00F58CD6 /* WelcomeViewController.swift */,
 				59B59BB7293897300095B066 /* PersonViewController.swift */,
 				59B59BB9293897450095B066 /* HobbiesViewController.swift */,
+				59B59BBB293899C10095B066 /* ExperienceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B59BBC293899C10095B066 /* ExperienceViewController.swift in Sources */,
 				59BEB26229349A7B00F58CD6 /* LoginViewController.swift in Sources */,
 				59B59BB8293897300095B066 /* PersonViewController.swift in Sources */,
 				59BEB26429349ABB00F58CD6 /* WelcomeViewController.swift in Sources */,

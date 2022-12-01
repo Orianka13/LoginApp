@@ -162,6 +162,7 @@
                     <connections>
                         <segue destination="JEj-iP-OQe" kind="relationship" relationship="viewControllers" id="Aeq-KL-skD"/>
                         <segue destination="lRS-gC-MH2" kind="relationship" relationship="viewControllers" id="r0V-I0-DFF"/>
+                        <segue destination="dS6-ZM-q63" kind="relationship" relationship="viewControllers" id="Zfy-5l-mNq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzL-DW-8NU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -188,7 +189,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DG-Js-bwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3557.971014492754" y="765.40178571428567"/>
+            <point key="canvasLocation" x="4468.115942028986" y="765.40178571428567"/>
         </scene>
         <!--My hobbies-->
         <scene sceneID="5ZA-rc-FBm">
@@ -206,7 +207,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIX-4f-M8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4370" y="765"/>
+            <point key="canvasLocation" x="5279.7101449275369" y="764.73214285714278"/>
+        </scene>
+        <!--Experience-->
+        <scene sceneID="NUR-rg-wSJ">
+            <objects>
+                <viewController id="Y9P-qX-dzC" customClass="ExperienceViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="08L-Qc-CCT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2Gn-uq-I1t"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Experience" id="tC0-gs-k88"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kI-VZ-EmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2648" y="765"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eS0-5t-xFN">
@@ -229,11 +246,34 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fpc-WJ-lad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2647.826086956522" y="765.40178571428567"/>
+            <point key="canvasLocation" x="3558" y="765"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mM6-el-qRi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dS6-ZM-q63" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="laptopcomputer.and.iphone" catalog="system" id="wzn-Jr-kw6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vba-vz-e1C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y9P-qX-dzC" kind="relationship" relationship="rootViewController" id="YpJ-Aq-RTg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J4i-pQ-JCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.68115942029" y="764.73214285714278"/>
         </scene>
     </scenes>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
+        <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="74"/>
         <image name="person.fill.checkmark" catalog="system" width="128" height="88"/>
     </resources>
 </document>

@@ -235,12 +235,54 @@
                     <view key="view" contentMode="scaleToFill" id="bpO-az-Qxz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Axa-lE-1Nv">
+                                <rect key="frame" x="0.0" y="160" width="414" height="32"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.36078431370000003" blue="0.26274509800000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <color key="tintColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentedControlTapped:" destination="Sky-dd-IRF" eventType="valueChanged" id="xti-iH-X0Z"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM9-ym-aZr">
+                                <rect key="frame" x="16" y="542" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ioW-UP-cqb">
+                                <rect key="frame" x="0.0" y="221" width="414" height="291"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="zfp-2k-gVD"/>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ioW-UP-cqb" firstAttribute="trailing" secondItem="zfp-2k-gVD" secondAttribute="trailing" id="3jS-wU-Q0v"/>
+                            <constraint firstItem="ioW-UP-cqb" firstAttribute="leading" secondItem="zfp-2k-gVD" secondAttribute="leading" id="J5R-BZ-pDJ"/>
+                            <constraint firstItem="ioW-UP-cqb" firstAttribute="height" secondItem="bpO-az-Qxz" secondAttribute="height" multiplier="0.324777" id="PQB-jp-xkL"/>
+                            <constraint firstItem="Axa-lE-1Nv" firstAttribute="top" secondItem="zfp-2k-gVD" secondAttribute="top" constant="20" id="UPa-9C-ina"/>
+                            <constraint firstItem="Axa-lE-1Nv" firstAttribute="leading" secondItem="zfp-2k-gVD" secondAttribute="leading" id="YaD-5d-YC0"/>
+                            <constraint firstItem="NM9-ym-aZr" firstAttribute="leading" secondItem="zfp-2k-gVD" secondAttribute="leading" constant="16" id="iLy-lI-xjB"/>
+                            <constraint firstItem="zfp-2k-gVD" firstAttribute="trailing" secondItem="NM9-ym-aZr" secondAttribute="trailing" constant="16" id="iQZ-sE-VLJ"/>
+                            <constraint firstItem="ioW-UP-cqb" firstAttribute="top" secondItem="Axa-lE-1Nv" secondAttribute="bottom" constant="30" id="iia-6U-CJX"/>
+                            <constraint firstItem="NM9-ym-aZr" firstAttribute="top" secondItem="ioW-UP-cqb" secondAttribute="bottom" constant="30" id="x5Y-gm-PZB"/>
+                            <constraint firstItem="Axa-lE-1Nv" firstAttribute="trailing" secondItem="zfp-2k-gVD" secondAttribute="trailing" id="y36-Xg-qeh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="My hobbies" id="jGd-RA-iB4">
                         <barButtonItem key="backBarButtonItem" title=" " id="bJd-I9-RpF"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="NM9-ym-aZr" id="jke-To-G34"/>
+                        <outlet property="hobbyPhoto" destination="ioW-UP-cqb" id="0AW-oY-CNK"/>
+                        <outlet property="segmentedControl" destination="Axa-lE-1Nv" id="m0w-Le-tNn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIX-4f-M8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

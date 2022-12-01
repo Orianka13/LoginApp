@@ -17,7 +17,7 @@ final class PersonViewController: UIViewController {
     var person: Person!
     
     private var pickerView = UIPickerView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +29,14 @@ final class PersonViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let hobbiesVC = segue.destination as? HobbiesViewController {
+            hobbiesVC.hobbies = person.hobbies
+        }
+    }
+    
     
     private func setUI() {
         navigationItem.title = person.name
@@ -49,10 +57,6 @@ final class PersonViewController: UIViewController {
 
 extension PersonViewController: UIPickerViewDelegate {
     
-    private enum MainColor {
-        static let mainBackgroundColor: UIColor = UIColor(red: 208/255, green: 92/255, blue: 67/255, alpha: 1)
-    }
-    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return person.title[row]
     }
@@ -65,7 +69,7 @@ extension PersonViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        let attributedString = NSAttributedString(string: person.title[row], attributes: [NSAttributedString.Key.foregroundColor: MainColor.mainBackgroundColor])
+        let attributedString = NSAttributedString(string: person.title[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 1/255, green: 93/255, blue: 104/255, alpha: 1)])
         return attributedString
     }
 }

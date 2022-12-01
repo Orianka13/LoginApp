@@ -20,8 +20,10 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let welcomeVC = segue.destination as? WelcomeViewController {
-            welcomeVC.person = user.person
+        if let tabBarVC = segue.destination as? UITabBarController {
+            if let welcomeVC = tabBarVC.viewControllers?.first as? WelcomeViewController {
+                welcomeVC.person = user.person
+            }
         }
     }
     

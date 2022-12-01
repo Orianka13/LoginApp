@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0n-r8-oYC">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I0n-r8-oYC">
                                 <rect key="frame" x="48" y="292" width="318" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -84,7 +84,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="goe-XD-lw6" id="GZc-v6-W9V"/>
                         <outlet property="userNameTextField" destination="I0n-r8-oYC" id="IOI-ij-bdC"/>
-                        <segue destination="JEj-iP-OQe" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="Zim-Bk-mGV"/>
+                        <segue destination="JJ6-m9-C1M" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="ytp-9z-Pza"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -137,9 +137,7 @@
                             <constraint firstItem="J6A-Vc-TuE" firstAttribute="top" secondItem="fHr-ZT-R7R" secondAttribute="bottom" constant="53" id="jwg-qe-nxl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Cd3-tK-6bp">
-                        <barButtonItem key="backBarButtonItem" title=" " id="G7o-fm-avs"/>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill.checkmark" catalog="system" selectedImage="person.fill.checkmark" id="Nt6-88-s9v"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="fHr-ZT-R7R" id="OVF-IE-EQE"/>
                     </connections>
@@ -147,10 +145,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLB-ee-Cfz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="SSM-eM-v2H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2584.057971014493" y="77.678571428571431"/>
+            <point key="canvasLocation" x="3557.971014492754" y="77.678571428571431"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HTY-M8-aQs">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JJ6-m9-C1M" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dyb-sI-gky">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.81568627449999997" green="0.36078431370000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JEj-iP-OQe" kind="relationship" relationship="viewControllers" id="Aeq-KL-skD"/>
+                        <segue destination="lRS-gC-MH2" kind="relationship" relationship="viewControllers" id="r0V-I0-DFF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzL-DW-8NU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2647.826086956522" y="77.678571428571431"/>
+        </scene>
+        <!--Person name-->
+        <scene sceneID="FY4-BX-dXI">
+            <objects>
+                <viewController id="FQr-Ub-Y53" customClass="PersonViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3gg-ms-wiN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ov3-xe-Sah"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Person name" id="Fva-3x-QRz">
+                        <barButtonItem key="rightBarButtonItem" title="My hobbies" id="8MW-1z-vRg">
+                            <connections>
+                                <segue destination="Sky-dd-IRF" kind="show" id="e1W-pC-jrC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DG-Js-bwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3557.971014492754" y="765.40178571428567"/>
+        </scene>
+        <!--My hobbies-->
+        <scene sceneID="5ZA-rc-FBm">
+            <objects>
+                <viewController id="Sky-dd-IRF" customClass="HobbiesViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpO-az-Qxz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zfp-2k-gVD"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My hobbies" id="jGd-RA-iB4">
+                        <barButtonItem key="backBarButtonItem" title=" " id="bJd-I9-RpF"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIX-4f-M8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4370" y="765"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eS0-5t-xFN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="lRS-gC-MH2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" image="ellipsis" catalog="system" id="g03-RV-gWH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="map-PG-bIZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.81568627449999997" green="0.36078431370000003" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FQr-Ub-Y53" kind="relationship" relationship="rootViewController" id="Weh-kH-T9Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fpc-WJ-lad" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2647.826086956522" y="765.40178571428567"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
         <image name="person.fill.checkmark" catalog="system" width="128" height="88"/>
     </resources>
 </document>

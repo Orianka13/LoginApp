@@ -12,8 +12,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let userName = "User"
-    private let password = "123"
+    private let user = User.getUser()
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -22,12 +21,12 @@ final class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let welcomeVC = segue.destination as? WelcomeViewController {
-            welcomeVC.userName = userName
+            welcomeVC.person = user.person
         }
     }
     
     @IBAction func logInTapped() {
-        if userNameTextField.text == userName, passwordTextField.text == password {
+        if userNameTextField.text == user.userName, passwordTextField.text == user.password {
             performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         } else {
             showAlert(title: "Error",
@@ -38,8 +37,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotCredentials(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(userName)")
-        : showAlert(title: "Oops!", message: "Your password is \(password)")
+        ? showAlert(title: "Oops!", message: "Your name is \(user.userName)")
+        : showAlert(title: "Oops!", message: "Your password is \(user.password)")
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {

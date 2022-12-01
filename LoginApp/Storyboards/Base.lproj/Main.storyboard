@@ -186,29 +186,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsn-bD-a9o">
-                                <rect key="frame" x="173.5" y="765" width="67" height="31"/>
-                                <color key="backgroundColor" red="0.81568627449999997" green="0.36078431370000003" blue="0.26274509800000001" alpha="0.74947018649999997" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="selectMore:" destination="FQr-Ub-Y53" eventType="touchUpInside" id="Q24-Tv-H7X"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-vW-ZVJ">
+                                <rect key="frame" x="140" y="730" width="134" height="34"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.36078431370000003" blue="0.26274509800000001" alpha="0.77000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="CHE-ZE-cay"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ov3-xe-Sah"/>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="YLf-CR-30f" firstAttribute="leading" secondItem="ov3-xe-Sah" secondAttribute="leading" constant="16" id="Beo-2n-wmo"/>
+                            <constraint firstItem="WYG-vW-ZVJ" firstAttribute="centerX" secondItem="ov3-xe-Sah" secondAttribute="centerX" id="CUP-TG-7rG"/>
                             <constraint firstItem="ov3-xe-Sah" firstAttribute="trailing" secondItem="YLf-CR-30f" secondAttribute="trailing" constant="16" id="Dln-hv-QmV"/>
-                            <constraint firstItem="bsn-bD-a9o" firstAttribute="centerX" secondItem="ov3-xe-Sah" secondAttribute="centerX" id="LJ3-zk-zk8"/>
                             <constraint firstItem="PXY-g4-IAd" firstAttribute="trailing" secondItem="ov3-xe-Sah" secondAttribute="trailing" id="Mhm-Np-izs"/>
-                            <constraint firstAttribute="bottom" secondItem="bsn-bD-a9o" secondAttribute="bottom" constant="100" id="T0A-Q4-E98"/>
                             <constraint firstItem="YLf-CR-30f" firstAttribute="top" secondItem="PXY-g4-IAd" secondAttribute="bottom" constant="30" id="Yfx-oz-2lS"/>
                             <constraint firstItem="PXY-g4-IAd" firstAttribute="leading" secondItem="ov3-xe-Sah" secondAttribute="leading" id="e4s-Rl-PGt"/>
                             <constraint firstItem="PXY-g4-IAd" firstAttribute="height" secondItem="3gg-ms-wiN" secondAttribute="height" multiplier="0.328125" id="gQK-ki-nsR"/>
                             <constraint firstItem="PXY-g4-IAd" firstAttribute="top" secondItem="ov3-xe-Sah" secondAttribute="top" constant="30" id="iDs-fC-mvX"/>
+                            <constraint firstItem="ov3-xe-Sah" firstAttribute="bottom" secondItem="WYG-vW-ZVJ" secondAttribute="bottom" id="iwG-l8-zcz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Person name" id="Fva-3x-QRz">
@@ -221,7 +221,7 @@
                     <connections>
                         <outlet property="descriptionLabel" destination="YLf-CR-30f" id="sNq-xV-yxY"/>
                         <outlet property="image" destination="PXY-g4-IAd" id="sdJ-pW-jZ7"/>
-                        <outlet property="selectMoreButton" destination="bsn-bD-a9o" id="Loq-DI-U7c"/>
+                        <outlet property="showMoreTextField" destination="WYG-vW-ZVJ" id="zG3-n8-USk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DG-Js-bwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

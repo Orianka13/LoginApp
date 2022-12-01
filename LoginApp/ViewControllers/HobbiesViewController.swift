@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HobbiesViewController: UIViewController {
+final class HobbiesViewController: UIViewController {
     
     var person: Person!
 

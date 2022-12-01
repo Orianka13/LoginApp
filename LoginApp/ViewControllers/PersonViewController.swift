@@ -9,10 +9,23 @@ import UIKit
 
 class PersonViewController: UIViewController {
     
+    @IBOutlet var image: UIImageView!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var selectMoreButton: UIButton!
+    
     var person: Person!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = person.name
+        
+        navigationItem.title = person.name
+        selectMoreButton.layer.cornerRadius = 10
+        selectMoreButton.setTitle(person.title.first, for: .normal)
+        image.image = UIImage(named: person.photos.first ?? "")
+        descriptionLabel.text = person.descriptions.first
+        
+    }
+    
+    @IBAction func selectMore(_ sender: UIButton) {
     }
 }

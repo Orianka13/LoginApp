@@ -176,8 +176,40 @@
                     <view key="view" contentMode="scaleToFill" id="3gg-ms-wiN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PXY-g4-IAd">
+                                <rect key="frame" x="0.0" y="170" width="414" height="294"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="YLf-CR-30f">
+                                <rect key="frame" x="16" y="494" width="382" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsn-bD-a9o">
+                                <rect key="frame" x="173.5" y="765" width="67" height="31"/>
+                                <color key="backgroundColor" red="0.81568627449999997" green="0.36078431370000003" blue="0.26274509800000001" alpha="0.74947018649999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="selectMore:" destination="FQr-Ub-Y53" eventType="touchUpInside" id="Q24-Tv-H7X"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ov3-xe-Sah"/>
                         <color key="backgroundColor" red="0.0039215686269999999" green="0.36470588240000001" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="YLf-CR-30f" firstAttribute="leading" secondItem="ov3-xe-Sah" secondAttribute="leading" constant="16" id="Beo-2n-wmo"/>
+                            <constraint firstItem="ov3-xe-Sah" firstAttribute="trailing" secondItem="YLf-CR-30f" secondAttribute="trailing" constant="16" id="Dln-hv-QmV"/>
+                            <constraint firstItem="bsn-bD-a9o" firstAttribute="centerX" secondItem="ov3-xe-Sah" secondAttribute="centerX" id="LJ3-zk-zk8"/>
+                            <constraint firstItem="PXY-g4-IAd" firstAttribute="trailing" secondItem="ov3-xe-Sah" secondAttribute="trailing" id="Mhm-Np-izs"/>
+                            <constraint firstAttribute="bottom" secondItem="bsn-bD-a9o" secondAttribute="bottom" constant="100" id="T0A-Q4-E98"/>
+                            <constraint firstItem="YLf-CR-30f" firstAttribute="top" secondItem="PXY-g4-IAd" secondAttribute="bottom" constant="30" id="Yfx-oz-2lS"/>
+                            <constraint firstItem="PXY-g4-IAd" firstAttribute="leading" secondItem="ov3-xe-Sah" secondAttribute="leading" id="e4s-Rl-PGt"/>
+                            <constraint firstItem="PXY-g4-IAd" firstAttribute="height" secondItem="3gg-ms-wiN" secondAttribute="height" multiplier="0.328125" id="gQK-ki-nsR"/>
+                            <constraint firstItem="PXY-g4-IAd" firstAttribute="top" secondItem="ov3-xe-Sah" secondAttribute="top" constant="30" id="iDs-fC-mvX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Person name" id="Fva-3x-QRz">
                         <barButtonItem key="rightBarButtonItem" title="My hobbies" id="8MW-1z-vRg">
@@ -186,6 +218,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="YLf-CR-30f" id="sNq-xV-yxY"/>
+                        <outlet property="image" destination="PXY-g4-IAd" id="sdJ-pW-jZ7"/>
+                        <outlet property="selectMoreButton" destination="bsn-bD-a9o" id="Loq-DI-U7c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6DG-Js-bwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

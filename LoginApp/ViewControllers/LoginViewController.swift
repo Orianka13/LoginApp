@@ -20,7 +20,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func logInTapped() {
-        if userNameTextField.text == user.userName, passwordTextField.text == user.password {
+        if userNameTextField.text == user.name, passwordTextField.text == user.password {
             performSegue(withIdentifier: "showWelcomeVC", sender: nil)
         } else {
             showAlert(title: "Error",
@@ -31,7 +31,7 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotCredentials(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(user.userName)")
+        ? showAlert(title: "Oops!", message: "Your name is \(user.name)")
         : showAlert(title: "Oops!", message: "Your password is \(user.password)")
     }
     
